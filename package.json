@@ -1,0 +1,32 @@
+{
+  "name": "playwright-testing",
+  "version": "1.0.0",
+  "description": "Playwright + Cucumber (BDD) framework: Gherkin features and code-first Playwright Test specs sharing one page-object model, demonstrated against the Sauce Demo shop",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "cucumber-js",
+    "test:smoke": "cucumber-js --tags '@smoke'",
+    "test:regression": "cucumber-js --tags '@regression'",
+    "test:headed": "cucumber-js --tags '@headed'",
+    "test:report": "cucumber-js --format html:test-results/cucumber-report.html --format json:test-results/cucumber-report.json",
+    "test:spec": "playwright test",
+    "test:spec:smoke": "playwright test --grep @smoke",
+    "test:unit": "node --test test/unit/*.test.mjs",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf test-results playwright-report"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.13.6",
+    "dotenv": "^18.0.4",
+    "playwright": "^1.63.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
