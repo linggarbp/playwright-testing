@@ -42,7 +42,7 @@ A second, browser-free spec exercises Playwright's `request` fixture against
 
 ## Tech stack
 
-- Node.js 20+
+- Node.js 22+
 - TypeScript (strict)
 - [Playwright](https://playwright.dev) — browser automation and the code-first test runner
 - [Cucumber](https://cucumber.io) + Gherkin — the BDD runner, driven by ts-node
